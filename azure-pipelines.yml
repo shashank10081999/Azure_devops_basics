@@ -8,12 +8,9 @@ trigger:
 
 pool: 
  name: default
- demands:
-    - maven
-    - Agent.Version -gt 2.163.1
 
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
